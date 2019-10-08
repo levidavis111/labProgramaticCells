@@ -10,7 +10,7 @@ import UIKit
 
 class UserDetailViewController: UIViewController {
     
-    var image = UIImage()
+    
     var oneUser: User!
 
     lazy var imageView: UIImageView = {
@@ -21,6 +21,7 @@ class UserDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .white
         addSubviews()
         constrainSubviews()
         setImage()
@@ -46,8 +47,10 @@ class UserDetailViewController: UIViewController {
             case .failure(let error):
                 print(error)
             case .success(let image):
-                self.image = image
-                
+                DispatchQueue.main.async {
+                    self.imageView.image = image
+
+                }
             }
         }
     }

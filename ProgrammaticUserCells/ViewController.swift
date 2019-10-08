@@ -84,4 +84,21 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let user = users[indexPath.row]
+        let userDetailVC = UserDetailViewController()
+        userDetailVC.oneUser = user
+        self.navigationController?.pushViewController(userDetailVC, animated: true)
+    }
 }
+
+//func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let podcastSelected = podcasts[indexPath.row]
+//        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+//        let podcastDetailVC = storyBoard.instantiateViewController(withIdentifier: "PodcastDetailViewController") as! PodcastDetailViewController
+//        podcastDetailVC.podcast = podcastSelected
+//    self.navigationController?.pushViewController(podcastDetailVC, animated: true)
+//    }
+//
+//}
