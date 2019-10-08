@@ -4,7 +4,7 @@ class ViewController: UIViewController {
     
     var users = [User]() {
         didSet {
-            tableView.reloadData()
+            self.tableView.reloadData()
         }
     }
     
@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         loadData()
         addSubviews()
+        setDelegates()
         setConstraints()
     }
     
@@ -38,6 +39,11 @@ class ViewController: UIViewController {
                 
             }
         }
+    }
+    
+    private func setDelegates() {
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
 
     private func addSubviews() {
@@ -64,14 +70,18 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as? UserTableViewCell else {return UITableViewCell()}
+        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as? UserTableViewCell else {return UITableViewCell()}
         let oneUser = users[indexPath.row]
         cell.nameLabel.text = "\(oneUser.name.first) \(oneUser.name.last)"
         
         return cell
     }
     
-    
 }
 
-extension ViewController: UITableViewDelegate {}
+extension ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+}

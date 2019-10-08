@@ -26,6 +26,7 @@ class UserTableViewCell: UITableViewCell {
         configureConstraints()
     }
     
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -42,7 +43,7 @@ class UserTableViewCell: UITableViewCell {
     }
     
     private func configureConstraints() {
-        self.nameLabel.translatesAutoresizingMaskIntoConstraints = true
+        self.nameLabel.translatesAutoresizingMaskIntoConstraints = false
         self.nameLabel.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor).isActive = true
         self.nameLabel.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor).isActive = true
         self.nameLabel.widthAnchor.constraint(equalToConstant: 200).isActive = true
