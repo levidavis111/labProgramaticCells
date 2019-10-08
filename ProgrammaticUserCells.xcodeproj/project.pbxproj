@@ -20,6 +20,8 @@
 		CDA0F5F72348FE9600B2E7F0 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0F5F62348FE9600B2E7F0 /* NetworkHelper.swift */; };
 		CDA0F5F92348FEB800B2E7F0 /* UsersFetchingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0F5F82348FEB800B2E7F0 /* UsersFetchingService.swift */; };
 		FC7775A0234D0CB40063B69A /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC77759F234D0CB40063B69A /* UserTableViewCell.swift */; };
+		FC7775A2234D20490063B69A /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7775A1234D20490063B69A /* UserDetailViewController.swift */; };
+		FC7775A4234D220C0063B69A /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7775A3234D220C0063B69A /* ImageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		CDA0F5F62348FE9600B2E7F0 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		CDA0F5F82348FEB800B2E7F0 /* UsersFetchingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersFetchingService.swift; sourceTree = "<group>"; };
 		FC77759F234D0CB40063B69A /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		FC7775A1234D20490063B69A /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		FC7775A3234D220C0063B69A /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 				CDA0F5CD2348F74900B2E7F0 /* AppDelegate.swift */,
 				CDA0F5CF2348F74900B2E7F0 /* SceneDelegate.swift */,
 				CDA0F5D12348F74900B2E7F0 /* ViewController.swift */,
+				FC7775A1234D20490063B69A /* UserDetailViewController.swift */,
 				FC77759F234D0CB40063B69A /* UserTableViewCell.swift */,
 				CDA0F5EF2348F7E300B2E7F0 /* User.swift */,
 				CDA0F5D62348F74F00B2E7F0 /* Assets.xcassets */,
@@ -119,6 +124,7 @@
 				CDA0F5F42348FE8800B2E7F0 /* AppError.swift */,
 				CDA0F5F62348FE9600B2E7F0 /* NetworkHelper.swift */,
 				CDA0F5F82348FEB800B2E7F0 /* UsersFetchingService.swift */,
+				FC7775A3234D220C0063B69A /* ImageManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -226,7 +232,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDA0F5F02348F7E300B2E7F0 /* User.swift in Sources */,
+				FC7775A4234D220C0063B69A /* ImageManager.swift in Sources */,
 				CDA0F5D22348F74900B2E7F0 /* ViewController.swift in Sources */,
+				FC7775A2234D20490063B69A /* UserDetailViewController.swift in Sources */,
 				CDA0F5F52348FE8800B2E7F0 /* AppError.swift in Sources */,
 				CDA0F5CE2348F74900B2E7F0 /* AppDelegate.swift in Sources */,
 				FC7775A0234D0CB40063B69A /* UserTableViewCell.swift in Sources */,
