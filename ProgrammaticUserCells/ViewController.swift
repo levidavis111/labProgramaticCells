@@ -4,7 +4,7 @@ class ViewController: UIViewController {
     
     lazy var tableView: UITableView = {
        let tableView = UITableView()
-        
+        tableView.register(UserTableViewCell.self, forCellReuseIdentifier: "userCell")
         
         
         return tableView
@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         addSubviews()
         setConstraints()
+        setDelegates()
     }
 
     private func addSubviews() {
