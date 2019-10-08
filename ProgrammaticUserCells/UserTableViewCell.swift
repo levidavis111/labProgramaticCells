@@ -23,7 +23,7 @@ class UserTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.contentView.addSubview(nameLabel)
-        setConstraints()
+        configureConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -41,7 +41,7 @@ class UserTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    private func setConstraints() {
+    private func configureConstraints() {
         self.nameLabel.translatesAutoresizingMaskIntoConstraints = true
         self.nameLabel.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor).isActive = true
         self.nameLabel.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor).isActive = true
